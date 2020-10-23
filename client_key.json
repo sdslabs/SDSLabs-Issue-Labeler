@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "github-bot-293410",
+  "private_key_id": "962e464ac699e2418573146fed66492dc0dcb6b2",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC55Gekos+avnRa\nPp4Qce5M6C+b2D3uBnIEWXOLsYUgVAcefv+4kxvgo99NJ410riNxvhSuXiw7Re0l\nQJ65THgv2jipYbPW0sGJp7Etxq+VbpDNT/BJfiiCn241Kyh9SZaISQ6YFZJ4dugV\nJ9IqmSnQXBjTEud7s7a6HpOTRbxFFPqEcSE0fof19rKKD9PyIUz/cAgLmEMnPYke\n/5ev6f7bPGVn2wO8OGEG3MalK9iVFuVDvCPvc1g8Ofg/J0CMB6lle/KLKAaIS1Bh\nKSwYxqIzIUmGkAIlAqMChf45+BbXfqox8SOB+BFF20Hd9TAZzTTjrgCSqxQvPXCB\nx/m9A0fzAgMBAAECggEAE+Zo1qib8JUT7/dFGj3qxK6Ug4AA5+LRFjhx6fyijkVA\nj9oI9nw/yerGbxmIB1DUYuBLkXvBC3AJxOj9NO6ul8d/ilkhv00c7TzCTG65LEDu\nXR8CJQlNkpI5DOsRBhHjJ2ApdkwqO8gq7IeF9GEk0fU8rm1B0lh4/Bq63Ki5+2u7\nwxTqTy9jbaAb8m0sHuje6Qz2dYDDusLYdnOGoL9N0pniFAEaKU/rLnOrZKagcoI6\nDjBBo7SrNzukL6ZYo+nwcDj+V8aVPg1GWtv743ev97pFiJWldgjlszI1O4VWyv4s\nhOcwpm2j4llmmj1bOdb+Zs+WKyjobdb4Zl57imcTBQKBgQDvthjslCDFyyiA81jM\najXU2aizcwDUkr6G7ti50RRS+J31B6Sb1GM02+UBTIckDSIaehczb+u1ZP0lNJ4x\n1Gngb67GSxsMR+GE/H/8mFKt2urGmefBi/GsWSMe3hP8+ZiqDoVlDDGqOuBjO1ma\nsQWMAMvu+sUgu7RlZyGX6Q/IzQKBgQDGhhidkJiIJ8sy8AFIWCmIBeqSgb3HhVN/\n4aolDm/Yu8mGm5XluPEJwejb0VwuEIcdyOWliHoCputajN9eEjQFcNBn4zanPZQj\nHqmuZ+SljlXh4T917QhJ8bRZRaw5n9UAmpRzlJ2jm9e24al8thkTbDcuCJXXqwtw\nmpQE9KpTvwKBgHhQj8X+u0xLofLHMWS4UniZHuGi8WHAnbygGUt6s5bJjo6z3V0R\nhxG65QB35sSjiuB7MzXwEQCkxaJs/JHKKbIqnDCO9e5+DaVwDtU7pxP38yrniLlO\ngmic/NG7aZDpvkRssWt8aVkl4AYufdT00PHqXHGAkHzTecIDt4rFwdRpAoGAJUSh\nNFsjt1O5GrvhkcIzMbzil1RR2zXVQgmMFl7KcmZ2Y5Wroy9/2HQVkcaQxnkF1HqV\nWejv9rV9M0eE2zURnP/br9UAuo6d06X69qm8S7QXvUq6zhmMV81PLP8eYMb3hqB+\nQ+BfY4prCYL9fVL2DCZhiXvFHXKXuDDcnr2LiCMCgYEAv2L32hLIhlbupIM5objB\nn4TdG2MANFutDH6k/TJQjE9brWz7EP9nvIR/hEgaBqtW1INTHhkfo6gK8AUj/6l0\nBQ48vuFrGha4hE1UZNzpzB9JL7bTGj8RrY1eXOqvkQVdt7DW0+ZKJIZ5ZwCF2TdZ\n3+DgQQGe/DNhsOTBoJ/EnJc=\n-----END PRIVATE KEY-----\n",
+  "client_email": "github-bot@github-bot-293410.iam.gserviceaccount.com",
+  "client_id": "105059654769365118486",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/github-bot%40github-bot-293410.iam.gserviceaccount.com"
+}

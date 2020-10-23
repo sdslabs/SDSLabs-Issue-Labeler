@@ -1,1 +1,1 @@
-web: python3 -m webservice
+web: pip3 install -r requirements.txt && python3 -m webservice
