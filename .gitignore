@@ -1,2 +1,2 @@
-env
+.env
 webservice/__pycache__/*
