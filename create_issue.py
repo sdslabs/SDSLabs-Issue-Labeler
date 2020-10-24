@@ -27,7 +27,7 @@ async def main():
             print(i)
             if len(array)==0:
                 break
-            start = count
+            start = count+1
             rows = []
             for issue in array:
                 x = {

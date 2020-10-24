@@ -5,7 +5,7 @@ from aiohttp.client import request
 from gidgethub import routing, sansio
 from gidgethub import aiohttp as gh_aiohttp
 
-router = routing.Router
+router = routing.Router()
 
 routes = web.RouteTableDef()
 
