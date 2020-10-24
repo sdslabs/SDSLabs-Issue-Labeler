@@ -1,0 +1,4 @@
+.env
+webservice/__pycache__/*
+env
+webservice/config.yml
