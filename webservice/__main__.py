@@ -4,7 +4,7 @@ import aiohttp
 from aiohttp import web
 from gidgethub import routing, sansio
 from gidgethub import aiohttp as gh_aiohttp
-from webservice.github_bot import get_labels
+from github_bot import get_labels
 import yaml
 
 CUR_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -25,8 +25,8 @@ async def issue_opened_event(event, gh, *args, **kwargs):
     issue = event.data["issue"]
     url = issue["url"]+"/labels"
     title = issue["title"]
-    body = issue["body"]
-    labels = get_labels(title, body)
+    body = "this is hardcoded body"
+    labels = await get_labels(title, body)
     await gh.post(url, data={"labels": labels})
 
 @routes.post("/")

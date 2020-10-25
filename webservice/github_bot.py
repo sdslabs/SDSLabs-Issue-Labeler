@@ -76,6 +76,7 @@ train_examples = create_examples(training_part)
 
 def convert_examples_to_features(examples,  max_seq_length, tokenizer):
     features = []
+    tokens_b = ''
     for (ex_index, example) in enumerate(examples):
         tokens_a = tokenizer.tokenize(example.text_a)
         if example.text_b and not isinstance(example.text_b, float):
@@ -613,7 +614,7 @@ def create_output(predictions):
 
 
 
-def get_labels(title, body):
+async def get_labels(title, body):
     predict_examples = [InputExample(guid=12345, text_a=title, text_b=body, labels=[
                                      0, 0, 0, 0, 0, 0, 0, 0, 0])]
     test_features = convert_examples_to_features(
@@ -621,7 +622,8 @@ def get_labels(title, body):
     predict_input_fn = input_fn_builder(
         features=test_features, seq_length=MAX_SEQ_LENGTH, is_training=False, drop_remainder=False)
     predictions = estimator.predict(predict_input_fn)
-    print(create_output(predictions))
+    
+    return ['test']
 
 
-get_labels("this is an important issue", "Very very urgently needed")
+# get_labels("this is an important issue", "Very very urgently needed")
