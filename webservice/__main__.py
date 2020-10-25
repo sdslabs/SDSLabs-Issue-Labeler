@@ -4,7 +4,7 @@ import aiohttp
 from aiohttp import web
 from gidgethub import routing, sansio
 from gidgethub import aiohttp as gh_aiohttp
-from webservice.labels import get_labels
+from webservice.github_bot import get_labels
 import yaml
 
 CUR_DIR = os.path.dirname(os.path.abspath(__file__))

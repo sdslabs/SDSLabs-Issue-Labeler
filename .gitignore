@@ -2,3 +2,5 @@
 webservice/__pycache__/*
 env
 webservice/config.yml
+ml-assets/*
+working/*

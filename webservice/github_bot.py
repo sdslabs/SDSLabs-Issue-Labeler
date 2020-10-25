@@ -10,15 +10,15 @@ from bert import optimization
 from bert import tokenization
 from bert import modeling
 
-BERT_VOCAB = './drive/My Drive/model/vocab.txt'
-BERT_INIT_CHKPNT = './drive/My Drive/model/bert_model.ckpt'
-BERT_CONFIG = './drive/My Drive/model/bert_config.json'
+BERT_VOCAB = './ml-assets/vocab.txt'
+BERT_INIT_CHKPNT = './ml-assets/model.ckpt-50000'
+BERT_CONFIG = './ml-assets/bert_config.json'
 
 tokenization.validate_case_matches_checkpoint(True, BERT_INIT_CHKPNT)
 tokenizer = tokenization.FullTokenizer(
     vocab_file=BERT_VOCAB, do_lower_case=True)
 
-train_data_filepath = './drive/My Drive/train/Dataset Github - Sheet1.csv'
+train_data_filepath = './ml-assets/dataset.csv'
 train_data = pd.read_csv(train_data_filepath)
 
 ID = 'id'
@@ -508,7 +508,7 @@ def model_fn_builder(bert_config, num_labels, init_checkpoint, learning_rate,
     return model_fn
 
 
-OUTPUT_DIR = "./drive/My Drive/working/output"
+OUTPUT_DIR = "./working/output"
 # Specify outpit directory and number of checkpoint steps to save
 run_config = tf.estimator.RunConfig(
     model_dir=OUTPUT_DIR,
@@ -611,7 +611,6 @@ def create_output(predictions):
     return dff
 
 
-create_output(predictions)
 
 
 def get_labels(title, body):
@@ -625,4 +624,4 @@ def get_labels(title, body):
     print(create_output(predictions))
 
 
-get_labels("Good for beginners", "Very very urgently needed")
+get_labels("this is an important issue", "Very very urgently needed")
