@@ -27,7 +27,18 @@ async def issue_opened_event(event, gh, *args, **kwargs):
     title = issue["title"]
     body = "this is hardcoded body"
     labels = await get_labels(title, body)
-    await gh.post(url, data={"labels": labels})
+    filtered_labels = []
+
+    for label_item in labels:
+        print(label_item['name'] ,label_item['probability'])
+        if(label_item['probability']>0.6):
+            filtered_labels.append(label_item['name'])
+
+    if(len(filtered_labels) < 2):
+        sorted_labels = sorted(labels, key = lambda i: i['probability'],reverse=True)
+        filtered_labels= [sorted_labels[0]['name'],sorted_labels[1]['name']]
+
+    await gh.post(url, data={"labels": filtered_labels})
 
 @routes.post("/")
 async def main(request):

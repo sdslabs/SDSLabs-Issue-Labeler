@@ -11,7 +11,7 @@ from bert import tokenization
 from bert import modeling
 
 BERT_VOCAB = './ml-assets/vocab.txt'
-BERT_INIT_CHKPNT = './ml-assets/model.ckpt-50000'
+BERT_INIT_CHKPNT = './ml-assets/model.ckpt-1674'
 BERT_CONFIG = './ml-assets/bert_config.json'
 
 tokenization.validate_case_matches_checkpoint(True, BERT_INIT_CHKPNT)
@@ -603,13 +603,13 @@ print("Prediction took time ", datetime.now() - current_time)
 
 def create_output(predictions):
     probabilities = []
+    preds = []
     for (i, prediction) in enumerate(predictions):
         preds = prediction["probabilities"]
-        probabilities.append(preds)
-    dff = pd.DataFrame(probabilities)
-    dff.columns = LABEL_COLUMNS
+    for (i, pred) in enumerate(preds):
+        probabilities.append({"name":LABEL_COLUMNS[i],"probability": pred})
 
-    return dff
+    return probabilities
 
 
 
@@ -622,8 +622,6 @@ async def get_labels(title, body):
     predict_input_fn = input_fn_builder(
         features=test_features, seq_length=MAX_SEQ_LENGTH, is_training=False, drop_remainder=False)
     predictions = estimator.predict(predict_input_fn)
-    
-    return ['test']
+    return create_output(predictions)
 
 
-# get_labels("this is an important issue", "Very very urgently needed")
